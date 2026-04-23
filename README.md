@@ -14,6 +14,35 @@
 - **Date:** April 23, 2026
 
 ---
+ 
+## Features
+✅ **Posts API** (`/api/posts`)
+- GET all posts with filtering (`?author=`, `?sort=newest|popular`)
+- GET single post by ID
+- POST create new post (with validation)
+- PUT update post
+- PATCH like a post (`/api/posts/:id/like`)
+- DELETE post
+
+✅ **Users API** (`/api/users`)
+- GET all users
+- GET user by ID
+- POST create new user (with validation)
+
+✅ **Middleware**
+- Logger: logs timestamp, method, and URL for every request
+- Validation: ensures required fields and minimum lengths
+- Error Handler: centralized 4xx/5xx error responses
+- CORS: allows cross-origin requests from frontend apps
+
+✅ **Environment Variables**
+- Configurable PORT via `.env`
+- NODE_ENV for development/production modes
+
+✅ **Health Check**
+- `GET /api/health` returns status and timestamp
+
+---
 
 ## Project Description
 Built a RESTful backend API using Node.js and Express for the CommunityHub platform. The API handles posts, users, and comments with full CRUD operations, middleware, validation, and error handling. The project is organized using a modular folder structure with separate routes, controllers, and middleware.
